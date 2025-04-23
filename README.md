@@ -170,3 +170,62 @@ export default function ValuesMissionSection() {
     </section>
   );
 }
+
+
+import { motion } from "framer-motion";
+
+export default function ContactSection() {
+  return (
+    <section className="bg-black text-white py-24 px-6 relative">
+      <motion.div 
+        className="max-w-3xl mx-auto text-center"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
+        <h2 className="text-4xl md:text-5xl font-bold text-cyan-400 mb-8">
+          Get in Touch with Riley
+        </h2>
+
+        <form className="space-y-6 text-left">
+          <div>
+            <label className="block mb-1 text-gray-300">Name</label>
+            <input 
+              type="text" 
+              defaultValue="Riley"
+              className="w-full p-3 rounded-md bg-[#1a1a1a] text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+            />
+          </div>
+          <div>
+            <label className="block mb-1 text-gray-300">Email</label>
+            <input 
+              type="email" 
+              defaultValue="iitrefundservice@gmail.com"
+              className="w-full p-3 rounded-md bg-[#1a1a1a] text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+            />
+          </div>
+          <div>
+            <label className="block mb-1 text-gray-300">WhatsApp Number</label>
+            <input 
+              type="text" 
+              defaultValue="+1 720-233-6886"
+              className="w-full p-3 rounded-md bg-[#1a1a1a] text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+            />
+          </div>
+
+          <div className="flex flex-col gap-3 mt-6">
+            <p className="text-gray-400">TikTok: <a href="https://www.tiktok.com/@rileythedev?_t=ZM-8vl8noGHdo7&_r=1" target="_blank" className="text-cyan-400 hover:underline">rileythedev</a></p>
+            <p className="text-gray-400">Discord: <span className="text-cyan-400">memefreak</span></p>
+          </div>
+
+          <button 
+            type="submit"
+            className="mt-6 w-full bg-cyan-600 hover:bg-cyan-700 text-white font-semibold py-3 rounded-2xl shadow-lg"
+          >
+            Submit
+          </button>
+        </form>
+      </motion.div>
+    </section>
+  );
+}
