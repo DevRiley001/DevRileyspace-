@@ -128,3 +128,45 @@ export default function PortfolioSection() {
     </section>
   );
 }
+
+
+import { motion } from "framer-motion";
+
+export default function ValuesMissionSection() {
+  return (
+    <section className="relative bg-black text-white py-24 px-6 overflow-hidden">
+      <div className="max-w-4xl mx-auto z-10 relative">
+        <motion.h2 
+          className="text-4xl md:text-5xl font-bold text-cyan-500 mb-6"
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+        >
+          Our Values & Mission
+        </motion.h2>
+        
+        <motion.p 
+          className="text-lg text-gray-300 mb-6"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.2 }}
+        >
+          Riley's values and mission are driven by a deep sense of responsibility and a commitment to protecting the digital world. He believes that ethical hacking is not just a job, but a calling to improve the security of individuals and organizations around the world.
+        </motion.p>
+
+        <motion.p 
+          className="text-lg text-gray-300"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.4 }}
+        >
+          His mission is to stay at the forefront of cybersecurity and to constantly innovate and adapt his techniques to stay ahead of emerging threats. He is dedicated to helping his clients stay safe and secure, and is always looking for ways to enhance his skills and knowledge to better serve their needs.
+        </motion.p>
+      </div>
+
+      <div className="absolute inset-0 z-0 opacity-10">
+        <img src="/cyber-glitch-bg.png" alt="Glitchy Digital Background" className="w-full h-full object-cover" />
+      </div>
+    </section>
+  );
+}
