@@ -82,3 +82,49 @@ export default function ServicesSection() {
 }
 
 
+import { motion } from "framer-motion";
+
+export default function PortfolioSection() {
+  return (
+    <section className="relative bg-[#0e0e0e] text-white py-24 px-6 overflow-hidden">
+      <div className="max-w-5xl mx-auto relative z-10">
+        <motion.h2 
+          className="text-4xl md:text-5xl font-bold mb-4 text-cyan-400"
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          Penetration Testing Tales: Adventures in Cyber Security
+        </motion.h2>
+        <motion.h3 
+          className="text-2xl md:text-3xl font-semibold mb-6 text-purple-300"
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          Uncovering the Hidden Secrets: A Day in the Life of an Ethical Hacker
+        </motion.h3>
+        <motion.p 
+          className="text-lg md:text-xl text-gray-300 mb-8"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.4 }}
+        >
+          Join me on my journey as an ethical hacker, uncovering vulnerabilities and protecting critical systems.
+        </motion.p>
+        <motion.div 
+          className="bg-gradient-to-r from-[#1a1a1a] to-[#111] p-6 rounded-2xl shadow-xl border border-gray-700"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
+          <h4 className="text-xl font-semibold text-white mb-2">SecureCorp Case Study</h4>
+          <p className="text-gray-400">
+            In collaboration with SecureCorp, I conducted a comprehensive penetration testing of their network, 
+            identifying multiple vulnerabilities and providing actionable recommendations.
+          </p>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
