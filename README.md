@@ -37,3 +37,47 @@ return ( <div className="relative w-full overflow-hidden bg-black text-white"> {
 
 ); }
 
+
+import { motion } from "framer-motion";
+
+export default function ServicesSection() {
+  return (
+    <section className="relative bg-black text-white py-20 overflow-hidden">
+      <div className="absolute inset-0 z-0">
+        <motion.img 
+          src="/services-glitch.png" // Place your glitchy service image here
+          alt="Ethical Hacking Services"
+          className="w-full h-full object-cover opacity-20"
+          initial={{ scale: 1.1 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 4, repeat: Infinity, repeatType: "reverse" }}
+        />
+      </div>
+
+      <motion.div 
+        className="relative z-10 max-w-4xl mx-auto text-center px-6"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
+        <h2 className="text-4xl md:text-5xl font-bold mb-8">
+          Ethical Hacking Services
+        </h2>
+        <ul className="space-y-4 text-lg md:text-xl text-gray-300">
+          <li>• Penetration Testing</li>
+          <li>• Vulnerability Assessments</li>
+          <li>• Social Engineering Testing</li>
+          <li>• Network Security Audits</li>
+          <li>• Web Application Security</li>
+        </ul>
+        <motion.button
+          className="mt-10 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-2xl shadow-lg"
+          whileHover={{ scale: 1.05 }}
+        >
+          Book Now
+        </motion.button>
+      </motion.div>
+    </section>
+  );
+}
+
