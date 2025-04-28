@@ -200,7 +200,7 @@ export default function ContactSection() {
             <label className="block mb-1 text-gray-300">Email</label>
             <input 
               type="email" 
-              defaultValue="iitrefundservice@gmail.com"
+              defaultValue="autotrackerr@gmail.com"
               className="w-full p-3 rounded-md bg-[#1a1a1a] text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-cyan-500"
             />
           </div>
@@ -215,7 +215,7 @@ export default function ContactSection() {
 
           <div className="flex flex-col gap-3 mt-6">
             <p className="text-gray-400">TikTok: <a href="https://www.tiktok.com/@rileythedev?_t=ZM-8vl8noGHdo7&_r=1" target="_blank" className="text-cyan-400 hover:underline">rileythedev</a></p>
-            <p className="text-gray-400">Discord: <span className="text-cyan-400">memefreak</span></p>
+            <p className="text-gray-400">Discord: <span className="text-cyan-400"></span></p>
           </div>
 
           <button 
